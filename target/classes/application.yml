@@ -1,4 +1,0 @@
-auth.cookie.hmac-key: my-secret-key
-management:
-  server:
-    port: 8080
