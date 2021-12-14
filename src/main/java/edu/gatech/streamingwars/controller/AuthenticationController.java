@@ -50,7 +50,7 @@ public class AuthenticationController {
         Cookie authCookie = new Cookie(CookieAuthenticationFilter.COOKIE_NAME, authenticationRpcService.createToken(userAccount));
         authCookie.setHttpOnly(true);
         authCookie.setSecure(true);
-        authCookie.setMaxAge((int) Duration.of(1, ChronoUnit.DAYS).toSeconds());
+        authCookie.setMaxAge(60*60*24);
         authCookie.setPath("/");
 
         servletResponse.addCookie(authCookie);
